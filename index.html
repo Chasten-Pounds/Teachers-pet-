@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJs</title>
+
+    
+
+    <!--Jquery-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+
+    <!--Local Style and adobe fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--Angular js CDN, messages-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.8.2/angular-messages.min.js" integrity="sha512-X3xzYri4sQgIJ9lQOEJesZcYYJsdDBekZU9AuEsSXwCHJTOkcEn4Chh9kUlTzTgYKWnQNxT3H96X5boZMuco+Q==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+     <!--AppJs-->
+   
+    <script src="app.js"></script>
+    <script src="student.js"></script>
+   
+
+</head>
+<body>
+
+  <!--Applicaion title-->
+
+<h1 class="sghead" style="color: #212e53;">Teachers Pet <i class="fa fa-apple"></i></h1>
+
+ <!--Full width Slideshow banner-->
+ <div class="container ct1">
+  <div class="mySlides">
+      <img src="images/workspace.jpg" style="width: 100%">
+  </div>
+     
+  <div class="mySlides">
+      <img src="images/friends.jpg" style="width: 100%">
+      
+  </div>
+  
+  <div class="mySlides">
+      <img src="images/amber.jpg" style="width: 100%">
+     
+  </div>
+  <div class="mySlides">
+      <img src="images/greenbook.jpg" style="width: 100%">
+    </div>
+     
+  <div class="mySlides">
+      <img src="images/plaid.jpg" style="width: 100%">
+     
+  </div>
+  
+
+
+</div>
+
+  
+
+
+<!--automatic slideshow-->
+<script>
+  var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+slides[slideIndex-1].style.display = "block";
+setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+
+
+</script> <!--End of automatic slides-->
+
+
+
+
+
+
+
+
+
+    <Section class ="content">
+
+        <style>
+
+            table, th, td {
+                border: 1px solid black;
+            }
+            
+            </style>
+
+        <div ng-controller="mainController">
+
+            <!--The Student input form-->
+
+            <div class="container" id="form1">
+              <h2 class="sghead" style="color: aliceblue; padding-bottom: .5em;">{{heading1 | uppercase}}</h2>
+                <div class="row SD">
+                  <div class="col-25">
+                    <label for="fname" >First Name</label>
+                  </div>
+                  <div class="col-75">
+                    <input class="isd" type="text" id="1" name="firstName" ng-model="firstName" placeholder="Students first name.."
+                     required>
+                  </div>
+                </div>
+                <div class="row SD">
+                  <div class="col-25">
+                    <label for="lname" >Last Name</label>
+                  </div>
+                  <div class="col-75">
+                    <input class="isd" type="text" id="2" name="lastname" ng-model="lastName"placeholder="Students last name.."
+                    style="margin-top: 1em;">
+                  </div>
+                </div>
+                <div class="row SD">
+                  <div class="col-25">
+                    <label for="country">Grade</label>
+                  </div>
+                  <div class="col-75">
+                    <input class="isd" type="number" id="3" name="grade" ng-model="grade" placeholder="Grade" style="margin-top: 1em;">
+                  </div>
+
+                  <div class="row btn-prime">
+                    <input class="btn-style" type="button" ng-click="add(firstName,lastName,grade)" value="Submit" style="margin-top: 10px;">
+                  </div>
+                </div>
+            </div>
+
+              <!--The Student table-->
+
+            <section  class=" container text-center" id="sec2">   
+                <h2 class="sghead" style="color: aliceblue;">{{heading2|uppercase}}</h2>
+                <div class="container tc" style="overflow-x: auto;">
+                  
+                <table  id="Table" style="width: 100%;">
+                    <tr >
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Grade</th>
+                        <th>Options</th>
+                    </tr>
+                    <tbody  id="tableBody">
+                      <tr ng-repeat ="student in students">
+                        <td>{{student.firstName}}</td>
+                        <td>{{student.lastName}}</td>
+                        <td>{{student.grade}}</td>
+                        <td><button class="btn editbtn" ng-click="editStudent(student.id)"  data-toggle="modal" data-target="#updateModal"><i class="fa fa-edit"></i></button>
+                        <button class="btn trashbtn" ng-click="deleteStudent(student.id)"><i class="fa fa-trash"></i></button></td>
+                      </tr>
+
+
+                    </tbody>
+            
+                  </table>
+                  </div>
+
+                  <div id="snackbar">Student Deleted</div>
+                  <div id="snackbar2">Student Added</div>
+
+                  <!--Form modal update-->
+
+           
+      <div class="w3-modal" id="updateModal">
+          <div class="w-3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('updateModal').style.display='none'"
+               class="w3-button w3-display-topright">&times;</span>
+              </button>
+            </div>
+              <form>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                    <label for="updateMessage">New First name</label>
+                    <input type="text"  id="updateFname" ng-model="updateFname" placeholder="Students first name..."></input>
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+                      <label for="updateMessage">New last name</label>
+                      <input style="margin-left: .4em;" type="text"  id="updateLname" ng-model="updateLname" placeholder="Students last name..."></input>
+                      </div>
+                      </div>
+                      <div class="row" style="margin-left: 1em;">
+                        <div class="col-md-4 mb-3">
+                        <label for="updateMessage">New Grade</label>
+                        <input style="margin-left: 1em;" type="number"  id="updateGrade" ng-model="updateGrade" placeholder="Students grade..."></input>
+                        </div>
+                        </div>
+                </form>
+            <div class="footer" style="text-align: right; padding: 2em;">
+              <button  type="button" class="btn btn-primary" id="updateSaveBtn"
+              ng-click="update(updateFname,updateLname,updateGrade)">Save changes</button>
+            </div>
+          </div>
+      </div>
+       
+
+
+
+            </div>
+
+            
+           
+    
+        </div>
+    
+
+    </Section>
+
+
+     <!-- Footer -->
+     
+
+      <footer class="w3-container text-center" style="padding: 2em;">
+        <a href="" target="_blank"><i class="fa fa-facebook" ></i></a>
+            <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+     </footer>
+
+     
+     
+      <!-- End footer -->
+
+
+
+
+</body>
+</html>

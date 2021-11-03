@@ -1,0 +1,498 @@
+@import url("https://use.typekit.net/znp6qka.css");
+
+body,h2,h3,h4,h5,h6 {font-family: "Conglomerate", sans-serif}
+h1 { font-family: "Conglomerate", avebury}
+p {font-family: "Poppins", sans-serif;}
+
+body
+{
+    background-color:rgb(247, 251, 255);
+   
+}
+
+.sghead{
+  text-align: center;
+}
+
+
+.SD
+{
+ margin-left: 15%;
+}
+
+
+.ct1{
+
+  box-shadow: 1px 1px 10px slategrey;
+}
+
+#sec2
+{
+    background-color: #4a919e;
+    box-shadow: 2px 2px 10px slategrey;
+}
+
+#form1
+{
+    background-color: #bed3c3;
+    box-shadow: 2px 2px 10px slategrey;
+}
+#table
+{
+    background-color: white;
+}
+
+.btn-prime{
+
+ text-align: right;
+ padding: 1em;
+}
+
+#updateModal{
+
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+#updateSaveBtn{
+
+  font-size: 20px;
+  border-radius: 15px;
+  height: 50px;
+  width: 150px;
+  background-color:#212e53 ;
+  color: white;
+  border: none;
+
+}
+
+#updateSaveBtn:hover{
+
+  background-color:#212e53 ;
+  color: white;
+  border: none;
+  box-shadow: 5px 5px 10px white;
+
+}
+
+.btn-style{
+
+  font-size: 20px;
+  border-radius: 20px;
+  height: 50px;
+  width: 100px;
+  background-color:#212e53 ;
+  color: white;
+  border: none;
+  
+
+}
+
+.btn-style:hover{
+
+  background-color:#212e53 ;
+  color: white;
+  border: none;
+  box-shadow: 5px 5px 10px white;
+  
+}
+
+.trashbtn{
+background-color: #ebaca2;
+border: none;
+border-radius: 20px;
+
+
+}
+
+
+.editbtn{
+
+background-color: #bed3c3;
+border: none;
+border-radius: 20px;
+margin-left: 2em;
+}
+
+
+
+footer
+{
+    background-color: #212e53;
+    color: #d5d5d5;
+    position: relative;
+    left: 0%;
+    bottom: 0%;
+    text-align: center;
+    width:100%;
+   
+}
+
+footer a 
+{
+    color: #d5d5d5;
+    font-size: 1.4em;
+    padding: 25px;
+}
+
+.sec2
+{
+    background-color:rgb(181, 208, 212);
+    color:black;
+}
+
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 50px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+
+
+/* Toast style for deletion message */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #ebaca2;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+
+  #snackbar2 {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #ebaca2;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  #snackbar2.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+
+
+
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  
+
+
+  /*---4k monitor screen size--*/
+
+  @media (max-width:2560px){
+    #form1{
+
+      padding: 1em;
+    }
+
+    #sec2{
+      padding-bottom: 1em;
+      padding-top: 1em;
+
+    }
+
+    .btn-style{
+
+      font-size: 40px;
+      border-radius: 40px;
+      height: 100px;
+      width: 180px;
+     
+    }
+    
+    .sghead{
+      font-size: 5em;
+    }
+
+    label{
+      font-size: 40px;
+    }
+  
+    .isd{
+      width: 55%;
+      font-size: 40px;
+    }
+  
+    #Table{
+      font-size: 40px;
+    }
+
+    footer{
+
+      font-size: x-large;
+    }
+
+  
+  }
+
+/*---Large Laptop screen size--*/
+
+@media (max-width:1440px){
+
+  #form1{
+
+    padding: 1em;
+  }
+
+  #sec2{
+    padding-bottom: 1em;
+    padding-top: 1em;
+
+  }
+
+  .sghead{
+    font-size: 3em;
+  }
+
+  .btn-style{
+
+    font-size: 22px;
+    border-radius: 25px;
+    height: 60px;
+    width: 100px;
+   
+  }
+  label{
+    font-size: x-large;
+  }
+
+  .isd{
+    width: 55%;
+    font-size: x-large;
+  }
+
+  #Table{
+    font-size: 25px;
+  }
+
+  footer{
+
+    font-size: large;
+  }
+
+
+}
+
+
+
+/*---laptop screen size--*/
+
+  @media (max-width: 1224px)
+  {
+    #form1{
+
+      padding: 1em;
+    }
+
+    #sec2{
+      padding-bottom: 1em;
+      padding-top: 1em;
+
+    }
+   
+  .sghead{
+    font-size: 2em;
+  }
+
+  .btn-style{
+
+    font-size: 18px;
+    border-radius: 20px;
+    height: 45px;
+    width: 90px;
+   
+  }
+    label{
+      font-size: large;
+    }
+
+    .isd{
+      width: 55%;
+      font-size: large;
+    }
+
+
+    #Table{
+      font-size: 20px;
+    }
+  
+    footer{
+  
+      font-size: small;
+    }
+
+  }
+
+/*---Tablet screen size--*/
+
+  @media (max-width: 768px)
+  {
+    #form1{
+
+      padding: 1em;
+    }
+    #sec2{
+      padding-bottom: 1em;
+      padding-top: 1em;
+
+    }
+    
+    label{
+      font-size: medium;
+    }
+
+    .isd{
+      width: 55%;
+      font-size: medium;
+    }
+
+    #Table{
+      font-size: 16px;
+    }
+  
+    footer{
+  
+      font-size: small;
+    }
+   
+
+  }
+
+/*---Mobile screen size--*/
+  @media (max-width: 320px){
+    .btn-style{
+
+      font-size: 10px;
+      border-radius: 20px;
+      height: 30px;
+      width: 100px;
+     
+    }
+    
+    .sghead{
+      font-size: 1em;
+    }
+
+    label{
+      font-size: xx-small;
+    }
+
+    .isd{
+      width: 90%;
+      font-size: xx-small;
+    }
+
+    #sec2{
+      padding-bottom: 1em;
+      padding-top: 1em;
+
+    }
+
+    #form1{
+
+      padding: 1em;
+    }
+
+    #Table{
+      font-size: 10px;
+      
+    }
+
+    .btn-prime{
+
+      text-align: center;
+      padding: 1em;
+     }
+  
+    footer{
+  
+      font-size: x-small;
+    }
+
+    .tc{
+      margin: 2px;
+    }
+
+    .SD{
+
+      margin: 0;
+    }
+
+    
+
+    
+  }
